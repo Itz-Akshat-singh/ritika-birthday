@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritika 🎂</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .shayari {
+      background-color: #ffffffcc;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.8;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .btn {
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color: #6200ea;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Ritika 🎉</h1>
+  <p>Ye gaana aur shayari sirf tumhare liye hai, dil se 💖</p>
+
+  <div class="shayari">
+    Tere jaisa na koi hai, na hoga is jahan mein,<br />
+    Teri muskurahat basi rahe har ek subah-o-shaam mein... 🌸<br /><br />
+    Tere jaise dilwale ko mile har khushi asmaan se,<br />
+    Har dua hai teri hifazat mein, har nigaah meri jaan se... 💫<br /><br />
+    Har lamha tu hasti rahe, yahi dua hai dil se,<br />
+    Tera chehra sada khilta rahe, har ek mehfil mein silsile se... 💖
+  </div>
+
+  <audio id="song" src="https://github.com/Itz-Akshat-singh/akshat-music/raw/refs/heads/main/Pyaar.mp3" type="audio/mpeg"></audio>
+
+  <div>
+    <button class="btn" onclick="playAudio()">▶️ Play</button>
+    <button class="btn" onclick="pauseAudio()">⏸️ Pause</button>
+    <button class="btn" onclick="resumeAudio()">🔄 Resume</button>
+    <button class="btn" onclick="replayAudio()">🔁 Replay</button>
+  </div>
+
+  <script>
+    const song = document.getElementById('song');
+
+    function playAudio() {
+      song.currentTime = 0;
+      song.play();
+    }
+
+    function pauseAudio() {
+      song.pause();
+    }
+
+    function resumeAudio() {
+      if (song.paused) {
+        song.play();
+      }
+    }
+
+    function replayAudio() {
+      song.currentTime = 0;
+      song.play();
+    }
+
+    // Disable right-click to prevent download
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</body>
+</html>
